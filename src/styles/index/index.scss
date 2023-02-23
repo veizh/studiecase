@@ -70,11 +70,11 @@ video{
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.459);
     filter:brightness(0.7);
     &.first{
-    background-image: url("../../../public/banner/banner.jpg");
+    background-image: url("/banner/banner.jpg");
 
     }
     &.second{
-    background-image: url("../../../public/banner/bannerSecond.jpg");
+    background-image: url("/banner/bannerSecond.jpg");
 
     }
   }

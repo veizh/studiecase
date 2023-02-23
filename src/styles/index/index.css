@@ -73,10 +73,10 @@
   filter: brightness(0.7);
 }
 .banner.first {
-  background-image: url("../../../public/banner/banner.jpg");
+  background-image: url("/banner/banner.jpg");
 }
 .banner.second {
-  background-image: url("../../../public/banner/bannerSecond.jpg");
+  background-image: url("/banner/bannerSecond.jpg");
 }
 
 .presentation {
