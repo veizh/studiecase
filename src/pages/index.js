@@ -6,6 +6,9 @@ import Carousel from '@/component/Carousel'
 import Tree from '@/component/tree'
 import { InView } from 'react-intersection-observer';
 import { useState } from 'react'
+import banner1 from "../../public/banner.jpg"
+import banner2 from "../../public/banner_second.jpg"
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -38,12 +41,12 @@ Whether you are planning an adventure with family, friends, or solo, we&apos;re 
         </div>
         
       </div>
-      <div className="banner first" ></div>
+      <div className="banner first" style={{backgroundImage: `url(${banner1.src})`}}></div>
       <div id="feedback" className='feedBack'>
       <InView as="h1" onChange={(inView)=>setVisible1(inView)} className={isVisible1?'subline active':"subline"}>They talk of us better than ourselves.</InView>
         <Carousel />
       </div>
-      <div id="offer" className="banner second" ></div>
+      <div id="offer" style={{backgroundImage: `url(${banner2.src})`}} className="banner second" ></div>
       <div  className='feedBack'>
       <InView as="h1" onChange={(inView)=>setVisible1(inView)} className={isVisible1?'subline active':"subline"}>What do we offer ?</InView>
       <p><br/>We provide an unforgettable custom made adventure, especially created for you.<br/><br/>Our objective is to make you live something new that you can handle even we also here to push  your limits further. After this experience we want you to be a better version of yourself: With a better mental and a new point of view. <br /><br /> <em>THE ONLY LIMITS KNOWS ARE THE ONE YOU SET FOR YOUSERLF </em> , myself. </p>
