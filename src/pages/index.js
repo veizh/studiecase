@@ -34,7 +34,7 @@ export default function Home() {
         <InView as="h1" onChange={(inView)=>setVisible(inView)} className={isVisible?'subline active':"subline"}>What are we about ?</InView>
         <p>Welcome to our adventure agency! We are a team of passionate explorers who believe that life is meant to be lived to the fullest. Our goal is to provide you with unforgettable experiences that will leave you with lifelong memories.<br/><br/>At our agency, we believe in responsible tourism and sustainable travel practices. We strive to minimize our impact on the environment and support local communities in the areas we visit. We want to ensure that our adventures are not only thrilling and fun but also ethical and sustainable.<br/><br/>
 
-Whether you're planning an adventure with family, friends, or solo, we're here to make it happen. So come and join us, let's embark on an adventure of a lifetime!</p>
+Whether you are planning an adventure with family, friends, or solo, we&apos;re here to make it happen. So come and join us, let&apos;s embark on an adventure of a lifetime!</p>
         </div>
         
       </div>
