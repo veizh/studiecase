@@ -1,0 +1,44 @@
+.gallery {
+  margin: auto;
+  width: calc(100% - 20px);
+  max-width: 600px;
+  aspect-ratio: 1920/1280;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.459);
+  position: relative;
+}
+@media (min-width: 768px) {
+  .gallery {
+    border-radius: 50px;
+  }
+}
+.gallery.active {
+  animation: peerRight 1.5s ease-out forwards;
+}
+.gallery img {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1920/1280;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+.gallery img.active {
+  opacity: 1;
+}
+
+@keyframes peerRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}/*# sourceMappingURL=tree.css.map */

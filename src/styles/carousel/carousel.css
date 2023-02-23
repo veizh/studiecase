@@ -1,0 +1,94 @@
+.wrapper-carousel {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  margin-top: 15px;
+}
+.wrapper-carousel.active {
+  animation: peerIn 0.7s ease-in-out;
+}
+.wrapper-carousel .cardAvis {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.26);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  padding: 15px;
+  height: 450px;
+  overflow: hidden;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.wrapper-carousel .cardAvis img {
+  border-radius: 150px;
+  width: 150px;
+  margin: 0 0 15px 0;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border: 1px solid black;
+}
+.wrapper-carousel .cardAvis p {
+  font-size: 22px;
+  text-align: center;
+}
+.wrapper-carousel .cardAvis .name {
+  font-weight: 600;
+  width: 60%;
+  letter-spacing: 1px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+.wrapper-carousel .cardAvis .avis {
+  margin-top: 5px;
+  overflow-Y: scroll;
+  padding-right: 5px;
+}
+.wrapper-carousel .cardAvis .avis::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 150px;
+}
+.wrapper-carousel .cardAvis .avis::-webkit-scrollbar-track {
+  border-radius: 150px;
+}
+.wrapper-carousel .cardAvis .avis::-webkit-scrollbar-thumb {
+  background-color: #fd3f92;
+  border-radius: 5px !important;
+}
+.wrapper-carousel .point {
+  background-color: rgb(15, 15, 15);
+  width: 20px;
+  cursor: pointer;
+  height: 20px;
+  border-radius: 150px;
+}
+.wrapper-carousel .point.active {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.555);
+  background-color: #fd3f92;
+}
+.wrapper-carousel .navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+@keyframes peerIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}/*# sourceMappingURL=carousel.css.map */

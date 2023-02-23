@@ -1,11 +1,17 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
-
+import Link from 'next/link'
+import NavBar from '@/component/navbar'
+import Carousel from '@/component/Carousel'
+import Tree from '@/component/tree'
+import { InView } from 'react-intersection-observer';
+import { useState } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [isVisible,setVisible]=useState(false)
+  const [isVisible1,setVisible1]=useState(false)
+
   return (
     <>
       <Head>
@@ -14,110 +20,73 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <div className='landing'>
+        <video muted loop autoPlay playsInline preload="auto" >
+          <source src='./test.mp4' />
+        </video>
+        <h1>Discover the world like never before.</h1>
+        <button><Link href="./#offer">See our offer</Link><img className="plane" src='./plane.svg' /></button>
+      </div>
+      <NavBar />
+      <div className='presentation'>
+        <div className='card'>
+
+        <InView as="h1" onChange={(inView)=>setVisible(inView)} className={isVisible?'subline active':"subline"}>What are we about ?</InView>
+        <p>Welcome to our adventure agency! We are a team of passionate explorers who believe that life is meant to be lived to the fullest. Our goal is to provide you with unforgettable experiences that will leave you with lifelong memories.<br/><br/>At our agency, we believe in responsible tourism and sustainable travel practices. We strive to minimize our impact on the environment and support local communities in the areas we visit. We want to ensure that our adventures are not only thrilling and fun but also ethical and sustainable.<br/><br/>
+
+Whether you're planning an adventure with family, friends, or solo, we're here to make it happen. So come and join us, let's embark on an adventure of a lifetime!</p>
+        </div>
+        
+      </div>
+      <div className="banner first" ></div>
+      <div id="feedback" className='feedBack'>
+      <InView as="h1" onChange={(inView)=>setVisible1(inView)} className={isVisible1?'subline active':"subline"}>They talk of us better than ourselves.</InView>
+        <Carousel />
+      </div>
+      <div id="offer" className="banner second" ></div>
+      <div  className='feedBack'>
+      <InView as="h1" onChange={(inView)=>setVisible1(inView)} className={isVisible1?'subline active':"subline"}>What do we offer ?</InView>
+      <p><br/>We provide an unforgettable custom made adventure, especially created for you.<br/><br/>Our objective is to make you live something new that you can handle even we also here to push  your limits further. After this experience we want you to be a better version of yourself: With a better mental and a new point of view. <br /><br /> <em>THE ONLY LIMITS KNOWS ARE THE ONE YOU SET FOR YOUSERLF </em> , myself. </p>
+       
+      </div>
+      <Tree />
+      <div id="contact" className='feedBack'>
+      <InView as="h1" onChange={(inView)=>setVisible1(inView)} className={isVisible1?'subline active':"subline"}>Contact Us</InView>
+     
+       <form action="https://formsubmit.co/durville.maxime.pro@gmail.com"  method="POST">
+          <input type="hidden" name="_captcha" value="false"></input>
+          <input type="hidden" name="_next" value="http:/localhost:3000/thankyou"></input>
+          <div className="containerInput email">
+            <label htmlFor="email">Adresse Email*</label>
+            <input type="email" name="email"  required/>
           </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+          
+          <div className="containerInput firstName">
+            <label htmlFor="firstName">Nom</label>
+            <input type="text" name="firstName"  required/>
           </div>
-        </div>
+          
+          <div className="containerInput lastName">
+            <label htmlFor="lastName">Prénom*</label>
+            <input type="text" name="lastName" required/>
+          </div>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
+          <div className="containerInput phone">
+            <label  htmlFor="phone">Numéro de Téléphone</label>
+            <input type="tel" name="phone" />
+          </div>
 
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+          <div className="containerInput message">
+            <label  htmlFor="message">Votre Projet*</label>
+            <textarea type="text" name="message" required/>
+          </div>
+          <div className="containerInput message">
+            <label  htmlFor="last">Durée de votre séjour</label>
+            <textarea type="text" name="last" required/>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
     </>
   )
 }

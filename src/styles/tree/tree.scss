@@ -1,0 +1,42 @@
+@import "../mixins/responsive";
+
+.gallery{
+    margin: auto;
+    width: calc(100% - 20px);
+    max-width: 600px;
+    aspect-ratio: 1920/1280;
+    border-radius: 20px;
+    overflow: hidden;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.459);
+        position: relative;
+        @include tablet{
+          border-radius: 50px;
+        }
+    &.active{
+        animation: peerRight 1.5s ease-out forwards;
+      }
+    img{
+        width: 100%;
+        max-width: 600px;
+        aspect-ratio: 1920/1280;
+
+        object-fit: cover;
+        object-position: top;
+        position: absolute;
+        opacity: 0;
+        transition:all 0.8s ease-in-out;
+        &.active{
+            opacity: 1;
+        }
+    }
+}
+@keyframes peerRight{
+    from{
+      opacity: 0;
+      transform: translateX(80px);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(00px);
+    }
+  }
