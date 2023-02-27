@@ -8,7 +8,7 @@
 }
 .landing{
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(85vh - 80px);
     object-fit: cover;
     background-attachment: fixed;
     position: relative;
@@ -20,7 +20,7 @@
 video{
     position: absolute;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(85vh - 80px);
 
     object-fit: cover;
     object-position: top;
