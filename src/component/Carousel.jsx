@@ -2,8 +2,37 @@ import { useEffect, useState } from "react"
 import { InView } from 'react-intersection-observer';
 
 const Card =(props)=>{
+    const [touchPosition, setTouchPosition] = useState(null)
+
+    const handleTouchStart = (e) => {
+        const touchDown = e.touches[0].clientX
+        setTouchPosition(touchDown)
+        console.log(touchDown);
+    }
+    const handleTouchMove = (e) => {
+        const touchDown = touchPosition
+    
+        if(touchDown === null) {
+            return
+        }
+    
+        const currentTouch = e.touches[0].clientX
+        const diff = touchDown - currentTouch
+    
+        if (diff > 5) {
+            props.incr()
+
+        }
+    
+        if (diff < -5) {
+            props.prev()
+        }
+    
+        setTouchPosition(null)
+    }
     return(
-        <div className="cardAvis" onClick={()=>props.incr()} >
+
+        <div className="cardAvis" onTouchStart={handleTouchStart}  onTouchMove={handleTouchMove}  onClick={()=>props.incr()} >
             <img className="photo" src={props.source} />
             <p className="name">{props.name + " "+props.lastname}</p>
             <p className="avis">{props.avis}</p>
@@ -45,7 +74,7 @@ const avis=[
 export default  function Carousel(){
     let [index,setIndex]=useState(0)
     const [isVisible,setVisible]=useState(false)
-
+ 
     function incrementer(){
         if(index===avis.length-1){
 
@@ -57,12 +86,32 @@ export default  function Carousel(){
            
         }
     }
+    function next(){
+        if(index===avis.length-1){
+
+            setIndex(0)
+        }
+        else{
+            setIndex(index+1)
+
+           
+        }
+    }
+    function prev(){
+        if(index===0){
+
+            setIndex(avis.length-1)
+        }
+        else{
+            setIndex(index-1)
+        }
+    }
     useEffect(()=>{
 
     },[index])
     return(
         <InView as="div" onChange={(InView)=>setVisible(InView)} className={isVisible?"wrapper-carousel active":"wrapper-carousel"}>
-           {<Card source={avis[index].source} lastname={avis[index].lastname} incr={()=>incrementer()} avis={avis[index].avis} name={avis[index].name}/>}
+           {<Card source={avis[index].source} lastname={avis[index].lastname} prev={()=>prev()} incr={()=>incrementer()} avis={avis[index].avis} name={avis[index].name}/>}
            <div className="navigation">{avis.map((e,i)=>{
             return(
            <div className={index===i?"point active":"point"} key={i}  onClick={()=>setIndex(i)}>

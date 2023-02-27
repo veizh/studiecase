@@ -35,13 +35,13 @@
   font-size: 38px;
   padding: 2px 10px;
   text-align: center;
-  -webkit-text-decoration: underline 2px solid white;
-          text-decoration: underline 2px solid white;
-  text-underline-offset: 10px;
+  -webkit-text-decoration: underline 2px solid #fd3f92;
+          text-decoration: underline 2px solid #fd3f92;
+  text-underline-offset: 5px;
 }
 .landing button {
   padding: 5px 10px;
-  border: 2px solid whitesmoke;
+  border: 2px solid #fd3f92;
   z-index: 2;
   background-color: transparent;
   display: flex;
@@ -51,7 +51,8 @@
 }
 .landing button:hover {
   border: 2px solid #fd3f92;
-  background-color: rgba(253, 63, 145, 0.5215686275);
+  background-color: #fd3f92;
+  color: white;
 }
 .landing a {
   color: whitesmoke;
@@ -60,6 +61,7 @@
 }
 .landing .plane {
   width: 25px;
+  cursor: pointer;
 }
 
 .banner {

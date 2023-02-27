@@ -15,8 +15,8 @@ form .containerInput {
   gap: 5px;
 }
 form .containerInput label {
-  -webkit-text-decoration: underline 1px #fd3f92;
-          text-decoration: underline 1px #fd3f92;
+  -webkit-text-decoration: underline 2px #fd3f92;
+          text-decoration: underline 2px #fd3f92;
   text-underline-offset: 5px;
 }
 form .containerInput.firstName, form .containerInput.lastName, form .containerInput.email, form .containerInput.phone {
@@ -46,6 +46,18 @@ form button {
   width: 100%;
   border: #fd3f92 2px solid;
   background-color: transparent;
+  height: 50px;
   color: #fd3f92;
   font-size: 27px;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  form button {
+    width: 250px;
+    margin-left: auto;
+  }
+}
+form button:hover {
+  background-color: #fd3f92;
+  color: whitesmoke;
 }/*# sourceMappingURL=form.css.map */

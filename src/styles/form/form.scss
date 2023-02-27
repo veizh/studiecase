@@ -15,7 +15,7 @@ form{
         font-size: 27px;
         gap: 5px;
         label{
-            text-decoration: underline 1px #fd3f92;
+            text-decoration: underline 2px #fd3f92;
             text-underline-offset: 5px;
         }
         &.firstName,&.lastName,&.email,&.phone{
@@ -45,8 +45,18 @@ form{
         width: 100%;
         border: #fd3f92 2px solid;
         background-color: transparent;
+        height: 50px;
         color: #fd3f92;
         font-size: 27px;
+        cursor: pointer;
+        @include desktop{
+            width:250px;
+            margin-left: auto;
+        }
+        &:hover{
+            background-color: #fd3f92;
+            color: whitesmoke;
+        }
 
     }
 }

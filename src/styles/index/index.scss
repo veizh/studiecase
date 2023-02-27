@@ -33,13 +33,13 @@ video{
     font-size: 38px;
     padding: 2px 10px;
     text-align: center;
-    text-decoration: underline 2px solid white;
-    text-underline-offset: 10px;
+    text-decoration: underline 2px solid #fd3f92;
+    text-underline-offset: 5px;
   
   }
   button{
     padding: 5px 10px;
-    border: 2px solid whitesmoke;
+    border: 2px solid #fd3f92;
     z-index: 2;
     background-color: transparent;
     display: flex;
@@ -48,7 +48,8 @@ video{
     transition: all 0.5s ease-in-out;
     &:hover{
         border: 2px solid #fd3f92;
-        background-color: #fd3f9185;
+        background-color: #fd3f92;
+        color: white;
     }
   }
   a{
@@ -58,6 +59,7 @@ video{
   }
   .plane{
     width: 25px;
+    cursor: pointer;
   }
 }
 .banner{
