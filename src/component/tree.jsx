@@ -12,7 +12,6 @@ const Tree =()=>{
 
             setIndex(index+1)
         }
-        console.log(index);
     }
     useEffect(()=>{
       

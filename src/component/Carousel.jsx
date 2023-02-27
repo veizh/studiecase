@@ -7,7 +7,6 @@ const Card =(props)=>{
     const handleTouchStart = (e) => {
         const touchDown = e.touches[0].clientX
         setTouchPosition(touchDown)
-        console.log(touchDown);
     }
     const handleTouchMove = (e) => {
         const touchDown = touchPosition
