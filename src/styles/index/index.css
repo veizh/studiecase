@@ -98,8 +98,10 @@ h1.subline {
   width: auto;
   line-height: 0.9;
 }
-h1.subline.active {
-  animation: peerTop 1.5s ease-out forwards;
+@media (min-width: 992px) {
+  h1.subline.active {
+    animation: peerTop 1.5s ease-out forwards;
+  }
 }
 h1.subline::before {
   content: "";

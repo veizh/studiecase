@@ -13,7 +13,10 @@
           border-radius: 50px;
         }
     &.active{
+      @include desktop{
+
         animation: peerRight 1.5s ease-out forwards;
+      }
       }
     img{
         width: 100%;

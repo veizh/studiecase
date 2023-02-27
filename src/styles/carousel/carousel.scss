@@ -1,3 +1,4 @@
+@import '../mixins/responsive';
 .wrapper-carousel{
     width: calc(100%);
 
@@ -10,7 +11,10 @@
     padding: 20px;
     margin-top: 15px;
     &.active{
-        animation: peerIn 0.7s ease-in-out;
+        @include desktop{
+
+            animation: peerIn 0.7s ease-in-out;
+        }
     }
     .cardAvis{
         box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.26);

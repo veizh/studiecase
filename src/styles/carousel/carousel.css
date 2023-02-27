@@ -9,8 +9,10 @@
   padding: 20px;
   margin-top: 15px;
 }
-.wrapper-carousel.active {
-  animation: peerIn 0.7s ease-in-out;
+@media (min-width: 992px) {
+  .wrapper-carousel.active {
+    animation: peerIn 0.7s ease-in-out;
+  }
 }
 .wrapper-carousel .cardAvis {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.26);

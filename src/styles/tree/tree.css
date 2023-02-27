@@ -13,8 +13,10 @@
     border-radius: 50px;
   }
 }
-.gallery.active {
-  animation: peerRight 1.5s ease-out forwards;
+@media (min-width: 992px) {
+  .gallery.active {
+    animation: peerRight 1.5s ease-out forwards;
+  }
 }
 .gallery img {
   width: 100%;

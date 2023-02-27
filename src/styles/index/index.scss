@@ -61,7 +61,7 @@ video{
   }
 }
 .banner{
-   z-index: 5;
+    z-index: 5;
     background-position: bottom;
     background-size: cover;
     background-attachment: fixed;
@@ -69,7 +69,6 @@ video{
     height: 50vh;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.459);
     filter:brightness(0.7);
-  
   }
   .presentation{
     max-width: 1250px;
@@ -96,7 +95,10 @@ video{
     width: auto;
     line-height: 0.9;
     &.active{
-      animation: peerTop 1.5s ease-out forwards;
+      @include desktop{
+
+        animation: peerTop 1.5s ease-out forwards;
+      }
     }
     &::before{
         content:'';
