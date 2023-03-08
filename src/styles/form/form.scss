@@ -1,6 +1,7 @@
 @import "../mixins/responsive";
 
 form{
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -15,7 +16,7 @@ form{
         font-size: 27px;
         gap: 5px;
         label{
-            margin-bottom: 15px;
+            margin-bottom: 8px;
             text-decoration: underline 2px #fd3f92;
             text-underline-offset: 5px;
         }

@@ -12,7 +12,7 @@
     margin-top: 15px;
     &.active{
         @include desktop{
-            
+
             animation: peerIn 0.7s ease-in-out;
         }
     }
@@ -24,7 +24,7 @@
         width: 100%;
         max-width: 350px;
         padding: 15px;
-        height: 450px;
+        height: 460px;
         overflow: hidden;
         cursor: pointer;
         -moz-user-select: none;
@@ -58,7 +58,7 @@
             border-bottom: 1px solid black;
         }
         .avis{
-            margin-top: 5px;
+            margin-top: 15px;
             overflow-Y: scroll;
             padding-right: 5px;
             &::-webkit-scrollbar{

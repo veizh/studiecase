@@ -5,7 +5,7 @@ import NavBar from '@/component/navbar'
 import Carousel from '@/component/Carousel'
 import Tree from '@/component/tree'
 import { InView } from 'react-intersection-observer';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import banner1 from "../../public/banner.jpg"
 import banner2 from "../../public/banner_second.jpg"
 
@@ -14,7 +14,11 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const [isVisible,setVisible]=useState(false)
   const [isVisible1,setVisible1]=useState(false)
+  const [hauteur,setHauteur]=useState(null)
+useEffect(()=>{
+  setHauteur(window.innerHeight)
 
+})
   return (
     <>
       <Head>
@@ -23,7 +27,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='landing'>
+      <div className='landing' style={{height:hauteur-80+"px"}}>
         <video muted loop autoPlay playsInline preload="auto" >
           <source src='./test.mp4' />
         </video>

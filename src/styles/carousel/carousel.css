@@ -22,7 +22,7 @@
   width: 100%;
   max-width: 350px;
   padding: 15px;
-  height: 450px;
+  height: 460px;
   overflow: hidden;
   cursor: pointer;
   -moz-user-select: none;
@@ -56,7 +56,7 @@
   border-bottom: 1px solid black;
 }
 .wrapper-carousel .cardAvis .avis {
-  margin-top: 5px;
+  margin-top: 15px;
   overflow-Y: scroll;
   padding-right: 5px;
 }
