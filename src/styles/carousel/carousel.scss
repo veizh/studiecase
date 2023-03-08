@@ -12,7 +12,7 @@
     margin-top: 15px;
     &.active{
         @include desktop{
-
+            
             animation: peerIn 0.7s ease-in-out;
         }
     }
@@ -39,6 +39,12 @@
             object-fit: cover;
             object-position: top;
             border: 1px solid black;
+            -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
         }
         p{
             font-size: 22px;

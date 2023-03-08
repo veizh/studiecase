@@ -7,7 +7,7 @@ form{
     flex-wrap: wrap;
     width: 100%;
     max-width: 1250px;
-    gap: 10px;
+    gap: 15px;
     .containerInput{
         width: 100%;
         display: flex;
@@ -15,6 +15,7 @@ form{
         font-size: 27px;
         gap: 5px;
         label{
+            margin-bottom: 15px;
             text-decoration: underline 2px #fd3f92;
             text-underline-offset: 5px;
         }

@@ -6,6 +6,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  height:-webkit-fill-available;
+}
+body{
+  min-height: 100vh;
+}
 .landing{
     width: 100%;
     height: calc(100vh - 80px);

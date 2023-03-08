@@ -39,6 +39,10 @@
   -o-object-position: top;
      object-position: top;
   border: 1px solid black;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently*/
 }
 .wrapper-carousel .cardAvis p {
   font-size: 22px;
