@@ -3,12 +3,12 @@ import { useEffect, useRef, useState } from "react"
 import Menu,{Cross}  from "../svg/svg"
 
 
-const NavBar = ()=>{
+const NavBar = (props)=>{
     const [modalActive,SetModalActive] = useState(false)
     
     return(
     <>
-        <div className={modalActive?"modalNav active":"modalNav"} >
+        <div className={modalActive?"modalNav active":"modalNav"} style={{height:props.hauteur}}>
             <div className="wrapper">
                 <div onClick={()=>SetModalActive(!modalActive)}>
                 <Cross  />  
@@ -27,7 +27,6 @@ const NavBar = ()=>{
 
                 <img className="logo" src="./logo.png" />  
                 <div  onClick={()=>{
-                    console.log("éclicked)");
                     SetModalActive(!modalActive)}
                     }>
                 <Menu  />  

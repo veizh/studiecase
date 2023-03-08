@@ -34,7 +34,7 @@ useEffect(()=>{
         <h1>Discover the world like never before.</h1>
         <button><Link href="./#offer">See our offer</Link><img className="plane" src='./plane.svg' /></button>
       </div>
-      <NavBar />
+      <NavBar hauteur={hauteur} />
       <div className='presentation'>
         <div className='card'>
 
